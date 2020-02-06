@@ -1,6 +1,13 @@
 import colors from 'vuetify/es5/util/colors'
-
 export default {
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:88'
+  },
+  server: {
+    port: process.env.VUE_WEBAPP_PORT || 3000, // default: 3000
+    host: '0.0.0.0',
+    timing: false
+  },
   mode: 'spa',
   /*
   ** Headers of the page
@@ -84,4 +91,5 @@ export default {
     extend (config, ctx) {
     }
   }
+  
 }
