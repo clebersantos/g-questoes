@@ -9,6 +9,8 @@ class Questao extends Model
     public $timestamps = false;
     public $incrementing = true;
 
+    protected $table = 'questoes';
+
     protected $fillable = [
         'nome',
         'orgao_id',

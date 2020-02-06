@@ -16,3 +16,4 @@ use Illuminate\Http\Request;
 Route::apiResource('assuntos', 'AssuntoController')->only(['index']);
 Route::apiResource('orgaos', 'OrgaoController')->only(['index']);
 Route::apiResource('bancas', 'BancaController')->only(['index']);
+Route::apiResource('questoes', 'QuestaoController')->only(['index']);

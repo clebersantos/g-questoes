@@ -32,6 +32,8 @@ ENTRYPOINT ["docker-entrypoint.sh"]
 RUN chmod 777 /usr/local/bin/docker-entrypoint.sh \
     && ln -s /usr/local/bin/docker-entrypoint.sh /
 
+RUN chmod 777 -R storage/
+
 RUN chmod 777 -R bootstrap/cache/
 
 RUN docker-php-ext-install bcmath \

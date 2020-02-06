@@ -2,6 +2,9 @@
 
 use Illuminate\Database\Seeder;
 use App\Models\Questao;
+use App\Models\Orgao;
+use App\Models\Banca;
+use App\Models\Assunto;
 
 class QuestaoTableSeeder extends Seeder
 {
@@ -14,7 +17,7 @@ class QuestaoTableSeeder extends Seeder
     {
         foreach ($this->getQuestoes() as $questao) {
             Questao::firstOrCreate([
-                'nome' => $questao['nome_questao'],
+                'nome' => $questao['nome'],
                 'orgao_id' => Orgao::firstOrCreate(['sigla' => $questao['sigla_orgao']])->id,
                 'banca_id' => Banca::firstOrCreate(['sigla' => $questao['sigla_banca']])->id,
                 'assunto_id' => Assunto::firstOrCreate(['nome' => $questao['nome_assunto']])->id,
