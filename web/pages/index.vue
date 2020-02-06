@@ -9,16 +9,12 @@
       sm8
       md6
     >
-      <div class="text-center">
-        <logo />
-        <vuetify-logo />
-      </div>
       <v-card>
         <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
+          Bem-vindo ao sistema de questões
         </v-card-title>
         <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
+          <p>Você ainda não possui um caderno.</p>
           <p>
             For more information on Vuetify, check out the <a
               href="https://vuetifyjs.com"
@@ -41,8 +37,7 @@
               href="https://github.com/vuetifyjs/vuetify/issues"
               target="_blank"
               title="contribute"
-            >
-              issue board
+            >issue board
             </a>.
           </p>
           <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
@@ -80,13 +75,11 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
 export default {
-  components: {
-    Logo,
-    VuetifyLogo
+
+  mounted () {
+    this.$axios.$get('api/bancas', { progress: true })
   }
 }
 </script>

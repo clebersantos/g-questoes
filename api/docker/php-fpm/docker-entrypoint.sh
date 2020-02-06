@@ -11,11 +11,11 @@ fi
 if  ! [ -e "/application/.env" ] ; then
      echo "[ ****************** ] Copying sample application configuration to real one"
      cp /application/.env.example /application/.env
+
+     php artisan migrate:refresh && php artisan db:seed
 fi
 
 echo "[ ****************** ] Ending Endpoint of Application"
-
-php artisan migrate:refresh && php artisan db:seed
 
 if [ "$USE_PHP_FPM" == "true" ]; then
     set -- php-fpm
