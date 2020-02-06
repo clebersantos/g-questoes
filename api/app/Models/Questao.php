@@ -6,25 +6,24 @@ use Illuminate\Database\Eloquent\Model;
 
 class Questao extends Model
 {
-    protected $table = 'tb_questao';
-    protected $primaryKey = "id_questao";
+    protected $primaryKey = "questao_id";
 
     public $timestamps = false;
     public $incrementing = true;
 
     protected $fillable = [
-        'ds_questao',
-        'id_orgao',
-        'id_banca',
-        'id_assunto'
+        'nome',
+        'orgao_id',
+        'banca_id',
+        'assunto_id'
     ];
 
     public function assunto()
     {
         return $this->hasOne(
             Assunto::Class,
-            'id_assunto',
-            'id_assunto'
+            'questao_id',
+            'assunto_id'
         );
     }
 
@@ -32,17 +31,17 @@ class Questao extends Model
     {
         return $this->hasOne(
             Banca::Class,
-            'id_banca',
-            'id_banca'
+            'questao_id',
+            'banca_id'
         );
     }
 
     public function orgao()
     {
         return $this->hasOne(
-            Assunto::Class,
-            'id_orgao',
-            'id_orgao'
+            Orgao::Class,
+            'questao_id',
+            'orgao_id'
         );
     }
 }

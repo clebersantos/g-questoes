@@ -6,13 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Banca extends Model
 {
-    protected $table = 'tb_banca';
-    protected $primaryKey = "id_banca";
+    protected $primaryKey = "banca_id";
     
     public $timestamps = false;
     public $incrementing = true;
 
     protected $fillable = [
-        'no_banca',
+        'nome',
+        'sigla',
     ];
 }

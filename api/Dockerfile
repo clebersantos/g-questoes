@@ -1,4 +1,4 @@
-FROM php:7.2.5-fpm
+FROM php:7.3-fpm
 
 WORKDIR "/application"
 
@@ -26,9 +26,13 @@ RUN ls -la /tmp \
 WORKDIR "/application"
 
 COPY . /application
-
 COPY ./docker/php-fpm/docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 RUN chmod 777 /usr/local/bin/docker-entrypoint.sh \
     && ln -s /usr/local/bin/docker-entrypoint.sh /
+
+RUN chmod 777 -R bootstrap/cache/
+
+RUN docker-php-ext-install bcmath \
+    && docker-php-ext-enable bcmath \

@@ -6,14 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Orgao extends Model
 {
-    protected $table = 'tb_orgao';
-    protected $primaryKey = "id_orgao";
+    protected $primaryKey = "orgao_id";
     
     public $timestamps = false;
     public $incrementing = true;
 
     protected $fillable = [
-        'no_orgao',
+        'nome',
+        'sigla'
     ];
-
 }
