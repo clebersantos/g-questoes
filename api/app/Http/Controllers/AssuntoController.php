@@ -15,6 +15,7 @@ class AssuntoController extends Controller
      */
     public function index()
     {
+
         return AssuntoResource::collection(App(Assunto::class)->get());
     }
 }

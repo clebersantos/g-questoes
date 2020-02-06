@@ -14,6 +14,13 @@ class Assunto extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'nome' => $this->nome,
+            'pai' => $this->pai,
+            'filhos' => Assunto::collection($this->filhos),
+            'quantidade' => $this->quantidadeQuestoes($request->all()
+            ),
+        ];
     }
 }

@@ -22,7 +22,7 @@ class Assunto extends Model
             'assunto_filho_id',
             'id',
             'id',
-            'assunto_filho_id'
+            'assunto_pai_id'
         );
     }
 

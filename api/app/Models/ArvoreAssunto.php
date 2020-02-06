@@ -8,6 +8,8 @@ class ArvoreAssunto extends Model
 {
     public $timestamps = false;
     public $incrementing = true;
+
+    protected $table = 'arvore_assunto';
     
     protected $fillable = [
         'assunto_pai_id',
@@ -18,7 +20,7 @@ class ArvoreAssunto extends Model
     {
         return $this->hasOne(
             Assunto::class,
-            'assunto_id',
+            'id',
             'assunto_pai_id'
         );
     }
@@ -27,7 +29,7 @@ class ArvoreAssunto extends Model
     {
         return $this->hasOne(
             Assunto::class,
-            'assunto_id',
+            'id',
             'assunto_filho_id'
         );
     }
