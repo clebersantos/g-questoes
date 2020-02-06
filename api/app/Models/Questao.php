@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Questao extends Model
 {
-    protected $primaryKey = "questao_id";
-
     public $timestamps = false;
     public $incrementing = true;
 
@@ -22,7 +20,7 @@ class Questao extends Model
     {
         return $this->hasOne(
             Assunto::Class,
-            'questao_id',
+            'id',
             'assunto_id'
         );
     }
@@ -31,7 +29,7 @@ class Questao extends Model
     {
         return $this->hasOne(
             Banca::Class,
-            'questao_id',
+            'id',
             'banca_id'
         );
     }
@@ -40,7 +38,7 @@ class Questao extends Model
     {
         return $this->hasOne(
             Orgao::Class,
-            'questao_id',
+            'id',
             'orgao_id'
         );
     }

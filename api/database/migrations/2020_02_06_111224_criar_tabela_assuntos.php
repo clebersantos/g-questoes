@@ -14,7 +14,7 @@ class CriarTabelaAssuntos extends Migration
     public function up()
     {
         Schema::create('assuntos', function (Blueprint $table) {
-            $table->bigIncrements('assunto_id');
+            $table->bigIncrements('id');
             $table->string('nome', 255)->nullable();
             $table->string('slug', 255)->nullable();
         });

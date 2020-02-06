@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class ArvoreAssunto extends Model
 {
-    protected $primaryKey = "arvore_assunto_id";
-
     public $timestamps = false;
     public $incrementing = true;
     

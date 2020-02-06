@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Assunto extends Model
 {
-    protected $primaryKey = "assunto_id";
-
     public $timestamps = false;
     public $incrementing = true;
     
@@ -22,8 +20,8 @@ class Assunto extends Model
             Assunto::class,
             ArvoreAssunto::class,
             'assunto_filho_id',
-            'assunto_id',
-            'assunto_id',
+            'id',
+            'id',
             'assunto_filho_id'
         );
     }
@@ -41,9 +39,7 @@ class Assunto extends Model
     public function questoes($arrParam = [])
     {
         $questoes = $this->hasMany(
-            Questao::class,
-            'assunto_id',
-            'assunto_id'
+            Questao::class
         );
         if ($arrParam) {
             $questoes->where($arrParam);

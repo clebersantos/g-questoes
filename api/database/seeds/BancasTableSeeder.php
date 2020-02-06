@@ -21,10 +21,9 @@ class BancasTableSeeder extends Seeder
     private function obterBancas()
     {
         return [
-            ['nome' => 'CEBRASPE (CESPE)', 'sigla' =>  'cebraspe'],
-            ['nome' => 'CESGRANRIO', 'sigla' => 'Cesgranrio'],
-            ['nome' => 'QUADRIX', 'sigla' => 'Quadrix'],
-            ['nome' => 'FUNCEPE', 'sigla' => 'Funcepe'],
+            ['nome' => 'CEBRASPE (CESPE)', 'sigla' =>  'CEBRASPE'],
+            ['nome' => 'CESGRANRIO', 'sigla' => 'CESGRANRIO'],
+            ['nome' => 'QUADRIX', 'sigla' => 'QUADRIX']
         ];
     }
 }

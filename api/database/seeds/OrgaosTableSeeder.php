@@ -21,8 +21,8 @@ class OrgaosTableSeeder extends Seeder
         return [
             ['nome' => 'Agência Nacional de Aviação Civil', 'sigla' => 'ANAC'],
             ['nome' => 'Agência Nacional de Águas', 'sigla' => 'ANA'],
-            ['nome' => 'Polícia Civil do Estado do Maranhão', 'sigla' => 'PC MA'],
-            ['nome' => 'Polícia Civil do Distrito Federal', 'sigla' => 'PC DF'],
+            ['nome' => 'Polícia Civil do Estado do Maranhão', 'sigla' => 'PC-MA'],
+            ['nome' => 'Polícia Civil do Distrito Federal', 'sigla' => 'PC-DF'],
         ];
     }
 }

@@ -14,7 +14,7 @@ class CriarTabelaBancas extends Migration
     public function up()
     {
         Schema::create('bancas', function (Blueprint $table) {
-            $table->bigIncrements('banca_id');  
+            $table->bigIncrements('id');  
             $table->string('nome', 255)->nullable();
             $table->string('sigla', 255)->nullable();
         });

@@ -39,10 +39,6 @@ class AssuntosTableSeeder extends Seeder
                 'filhos' => [
                     [
                         'nome' => 'Parte Geral',
-                        // 'filhos' => [
-                        //     ['nome' => 'Título I - Da Aplicação da Lei Penal'],
-                        //     ['nome' => 'Título II - Do Crime'],
-                        // ],
                         'nome' => 'Parte Especial',
                     ],
                 ]
@@ -51,8 +47,7 @@ class AssuntosTableSeeder extends Seeder
                 'nome' => 'Direito Penal Militar',
                 'filhos' => [
                     ['nome' => 'Aplicação da Lei Penal Militar'],
-                    ['nome' => 'Teoria Geral do Crime Militar'],
-                    ['nome' => 'Extinção de punibilidade'],
+                    ['nome' => 'Teoria Geral do Crime Militar']
                 ],
             ],
         ];

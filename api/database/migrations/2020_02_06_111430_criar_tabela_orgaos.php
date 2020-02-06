@@ -14,7 +14,7 @@ class CriarTabelaOrgaos extends Migration
     public function up()
     {
         Schema::create('orgaos', function (Blueprint $table) {
-            $table->bigIncrements('orgao_id');
+            $table->bigIncrements('id');
             $table->string('nome', 255)->nullable();
             $table->string('sigla', 10);
         });
