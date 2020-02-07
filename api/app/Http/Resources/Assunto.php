@@ -19,8 +19,7 @@ class Assunto extends JsonResource
             'nome' => $this->nome,
             'pai' => $this->pai,
             'filhos' => Assunto::collection($this->filhos),
-            'quantidade' => $this->quantidadeQuestoes($request->all()
-            ),
+            'quantidade' => $this->quantidadeQuestoes($request->all()),
         ];
     }
 }

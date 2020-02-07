@@ -8,7 +8,7 @@ class Assunto extends Model
 {
     public $timestamps = false;
     public $incrementing = true;
-    
+
     protected $fillable = [
         'nome',
         'slug'
@@ -59,7 +59,7 @@ class Assunto extends Model
         return $quantidadeQuestoes;
     }
 
-    public function scopeAssuntosRaiz($query)
+    public function scopeRaiz($query)
     {
         return $query->doesntHave('pai');
     }
