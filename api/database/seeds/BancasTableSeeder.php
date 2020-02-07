@@ -17,7 +17,7 @@ class BancasTableSeeder extends Seeder
             Banca::firstOrCreate($banca);
         }
     }
- 
+
     private function obterBancas()
     {
         return [
