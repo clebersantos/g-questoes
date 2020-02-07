@@ -37,10 +37,8 @@ class AssuntosTableSeeder extends Seeder
             [
                 'nome' => 'Código Penal',
                 'filhos' => [
-                    [
-                        'nome' => 'Parte Geral',
-                        'nome' => 'Parte Especial',
-                    ],
+                    ['nome' => 'Parte Geral'],
+                    ['nome' => 'Parte Especial'],
                 ]
             ],
             [
@@ -51,5 +49,5 @@ class AssuntosTableSeeder extends Seeder
                 ],
             ],
         ];
-    }    
+    }
 }

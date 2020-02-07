@@ -554,6 +554,32 @@ class QuestaoTableSeeder extends Seeder
                 'sigla_banca' => 'CEBRASPE',
                 'nome_assunto' => 'Teoria Geral do Crime Militar',
             ],
+            [
+                'nome' => 'Nulla enim nisi, fringilla eu nulla non, aliquam laoreet sem. Morbi id eros lectus. Suspendisse ac vehicula nisl',
+                'sigla_orgao' => 'PC-MA',
+                'sigla_banca' => 'CESPE',
+                'nome_assunto' => 'Parte Especial',
+
+            ],
+            [
+                'nome' => 'Lorem Ipsum Dolor',
+                'sigla_orgao' => 'PC-MA',
+                'sigla_banca' => 'CESPE',
+                'nome_assunto' => 'Parte Geral',
+            ],
+            [
+                'nome' => 'Nulla enim nisi, fringilla eu nulla non, aliquam laoreet sem. Morbi id eros lectus. Suspendisse ac vehicula nisl',
+                'sigla_orgao' => 'PC-DF',
+                'sigla_banca' => 'CESPE',
+                'nome_assunto' => 'Parte Especial',
+
+            ],
+            [
+                'nome' => 'Lorem Ipsum Dolor',
+                'sigla_orgao' => 'PC-DF',
+                'sigla_banca' => 'CESPE',
+                'nome_assunto' => 'Parte Geral',
+            ],
         ];
     }
 }
