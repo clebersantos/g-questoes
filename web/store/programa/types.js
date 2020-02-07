@@ -1,0 +1,2 @@
+export const SET_PROGRAMAS = 'SET_PROGRAMAS'
+export const SET_PROGRAMA = 'SET_PROGRAMA'

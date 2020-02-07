@@ -1,6 +1,6 @@
 import Http from './base/http';
 
 const service = new Http('');
-const endpoint = 'assuntos';
+const endpoint = 'bancas';
 
 export const buscar = params => service.get(endpoint, { params });

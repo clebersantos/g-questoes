@@ -1,7 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 export default {
   env: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:88'
+    baseUrl: process.env.VUE_APP_API_HOST || 'http://localhost:88'
   },
   server: {
     port: process.env.VUE_WEBAPP_PORT || 3000, // default: 3000
@@ -27,7 +27,11 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: {
+    name: 'circle',
+    color: '#3B8070',
+    background: 'white'
+  },
   /*
   ** Global CSS
   */
@@ -91,5 +95,4 @@ export default {
     extend (config, ctx) {
     }
   }
-  
 }

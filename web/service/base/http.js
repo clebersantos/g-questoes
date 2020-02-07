@@ -28,9 +28,9 @@ export default class Http extends Service {
    * @param {String} url
    * @returns {*|Promise<any>}
    */
-  get (url) {
+  get (url, options = {}) {
     return this.http
-      .get(this.constructor.normalize(this.path, url))
+      .get(this.constructor.normalize(this.path, url), options)
       .then(this.constructor.then)
   }
 

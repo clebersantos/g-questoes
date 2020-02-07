@@ -14,5 +14,6 @@ module.exports = {
   // add your custom rules here
   rules: {
     'no-shadow': ['error', { allow: ['state'] }],
+    "semi": 0,
   }
 }
