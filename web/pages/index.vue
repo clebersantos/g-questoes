@@ -45,9 +45,5 @@
 <script>
 
 export default {
-
-  mounted () {
-    this.$axios.$get('api/bancas', { progress: true })
-  }
 }
 </script>
